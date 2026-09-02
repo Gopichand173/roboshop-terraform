@@ -23,5 +23,5 @@ prod-plan:
 prod-apply: prod-init
 	terraform apply -var-file=./environments/prod/main.tfvars
 
-dev-destroy: prod-init
+prod-destroy: prod-init
 	terraform destroy -var-file=./environments/prod/main.tfvars
