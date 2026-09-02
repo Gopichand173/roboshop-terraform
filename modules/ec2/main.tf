@@ -7,7 +7,7 @@ resource "aws_instance" "instance" {
   }
 
   provisioner "local-exec" {
-	  command = << ANSIBLE
+	  command = <<ANSIBLE
 cd /home/ec2-user/roboshop-ansible
 make role_name="$(var.name)"
 ANSIBLE
@@ -17,8 +17,7 @@ ANSIBLE
 
 resource "aws_route53_record" "www" {
   zone_id = var.zone_id
-  name    = "${var.name}-${var.e
-      nv}"
+  name    = "${var.name}-${var.env}"
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance.private_ip]
