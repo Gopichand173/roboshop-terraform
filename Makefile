@@ -11,7 +11,7 @@ dev-apply: dev-init
 	terraform apply -var-file=./environments/dev/main.tfvars
 
 dev-destroy: dev-init
-	terraform apply -var-file=./environments/dev/main.tfvars
+	terraform destory -var-file=./environments/dev/main.tfvars
 
 prod-init:
 	rm -rf .terraform/terraform.tfstate
@@ -24,4 +24,4 @@ prod-apply: prod-init
 	terraform apply -var-file=./environments/prod/main.tfvars
 
 dev-destroy: prod-init
-	terraform apply -var-file=./environments/prod/main.tfvars
+	terraform destroy -var-file=./environments/prod/main.tfvars
