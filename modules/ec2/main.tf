@@ -6,12 +6,12 @@ resource "aws_instance" "instance" {
     Name = "${var.name}-${var.env}"
   }
 
- provisioner "local-exec" {
-     command << ANSIBLE
+  provisioner "local-exec" {
+	  command << ANSIBLE
 cd /home/ec2-user/roboshop-ansible
+make role_name="$(var.name)"
 
-make role_name = "$(var.name)"
- ANSIBLE
+ANSIBLE
  }
 
 }
