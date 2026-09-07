@@ -25,3 +25,7 @@ prod-apply: prod-init
 
 prod-destroy: prod-init
 	terraform destroy -var-file=./environments/prod/main.tfvars
+
+tools-infra:
+	git pull
+	cd tools ; terraform init ; terraform apply -auto-approve
