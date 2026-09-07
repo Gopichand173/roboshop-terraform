@@ -1,4 +1,4 @@
-module = "tools" {
+module "tools" {
 	for_each      = var.tools
 	source        = "../modules/ec2"
     ami           = var.ami
