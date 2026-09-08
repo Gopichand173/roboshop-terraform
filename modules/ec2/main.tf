@@ -17,14 +17,14 @@ resource "aws_route53_record" "record" {
 
 }
 
-# resource "aws_route53_record" "public" {
-#   zone_id = var.zone_id
-#   name    = local.name
-#   type    = "A"
-#   ttl     = 30
-#   records = [aws_instance.instance.public_ip]
-#
-# }
+resource "aws_route53_record" "public" {
+  zone_id = var.zone_id
+  name    = local.dnsNamePublicname
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.instance.public_ip]
+
+}
 
 # resource "null_resource" "ansible" {
 # 	depends_on = [aws_route53_record.record]
