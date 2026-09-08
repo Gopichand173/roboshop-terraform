@@ -10,8 +10,8 @@ dev-plan:
 dev-apply: dev-init
 	terraform apply -var-file=./environments/dev/main.tfvars
 
-dev-destroy: dev-init
-	terraform destroy -var-file=./environments/dev/main.tfvars
+#dev-destroy: dev-init
+	#terraform destroy -var-file=./environments/dev/main.tfvars
 
 prod-init:
 	rm -rf .terraform/terraform.tfstate
@@ -23,10 +23,10 @@ prod-plan:
 prod-apply: prod-init
 	terraform apply -var-file=./environments/prod/main.tfvars
 
-prod-destroy: prod-init
-	terraform destroy -var-file=./environments/prod/main.tfvars
+#prod-destroy: prod-init
+	# terraform destroy -var-file=./environments/prod/main.tfvars
 
 tools-infra:
 	git pull
-	rm -rf .terraform/terraform.tfstate
+	rm -rf .terraform/terraform.
 	cd tools ; terraform init ; terraform apply -auto-approve
