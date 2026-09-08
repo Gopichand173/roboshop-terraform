@@ -1,3 +1,4 @@
 locals {
-	name = var.env == null ? var.name : "${var.name}-${var.env}"
+	tagName = var.env == null ? var.name : "${var.name}-${var.env}"
+	dnsname = var.env == null ? "${var.name}-internal" : "${var.name}-${var.env}"
 }
