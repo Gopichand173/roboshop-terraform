@@ -19,7 +19,7 @@ resource "aws_route53_record" "record" {
 
 resource "aws_route53_record" "public" {
   zone_id = var.zone_id
-  name    = local.dnsNamePublicname
+  name    = local.dnsNamePublic
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance.public_ip]
