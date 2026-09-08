@@ -28,7 +28,7 @@ resource "aws_route53_record" "public" {
 }
 
 resource "null_resource" "ansible" {
-	triggers {
+	triggers = {
 		always = var.env == null ? timestamp() : "false"
 		} #everytime rerunning ansible code
 	depends_on = [aws_route53_record.record]
