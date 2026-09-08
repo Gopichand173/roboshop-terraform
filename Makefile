@@ -28,5 +28,5 @@ prod-apply: prod-init
 
 tools-infra:
 	git pull
-	rm -rf .terraform/terraform.
+	rm -rf .terraform/terraform.tfstate
 	cd tools ; terraform init ; terraform apply -auto-approve
