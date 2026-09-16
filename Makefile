@@ -10,7 +10,7 @@ dev-plan:
 dev-apply: dev-init
 	terraform apply -var-file=./environments/dev/main.tfvars
 
-#dev-destroy: dev-init
+dev-destroy: dev-init
 	#terraform destroy -var-file=./environments/dev/main.tfvars
 
 prod-init:
@@ -23,7 +23,7 @@ prod-plan:
 prod-apply: prod-init
 	terraform apply -var-file=./environments/prod/main.tfvars
 
-#prod-destroy: prod-init
+prod-destroy: prod-init
 	# terraform destroy -var-file=./environments/prod/main.tfvars
 
 tools-infra:
