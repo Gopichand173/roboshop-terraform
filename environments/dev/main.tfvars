@@ -29,9 +29,9 @@ instances = {
     payment  = {
         instance_type = "t3.small"
 }
-    dispatch = {
-        instance_type = "t3.small"
-}
+#     dispatch = {
+#         instance_type = "t3.small"
+# }
 }
 
 env = "dev"
