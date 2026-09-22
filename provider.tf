@@ -7,3 +7,9 @@ terraform {
 
   }
 }
+
+provider "vault" {
+ address = "http://vault-internal.gdevops72.com:8200"
+ token   = var.token
+
+}
