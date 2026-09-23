@@ -35,6 +35,6 @@ instances = {
 }
 
 env = "dev"
-ami = "ami-0220d79f3f480ecf5"
+ami = "ami-038d5f8e2b326b750"
 zone_id = "Z0546615GFL3PHM1TZU6"
 zone_name = "gdevops72.com"
